@@ -6,6 +6,37 @@ export function add(a: number, b: number): number {
 
 // Learn more at https://docs.deno.com/runtime/manual/examples/module_metadata#concepts
 let mycar ="honda";
+let funnyquote = { asd: "asd", asd2: "asd2" };
+
+class Phone {
+  #asas : string = "asas";
+  myvar: string = "myvar";
+
+  constructor(public name: string, public price: number) {
+      this.name = name;
+      this.price = price;
+  }
+
+  static phoneques: string = "u knoq exacly what a phone is?";
+
+  get namee(){
+      return this.name +"jhjj";
+  }
+
+  getTheName() {
+      return this.name;
+  }
+
+}
+
+Phone.prototype.chip ="snapdragon";
+Phone.prototype.ismyphonecheap = () => {return "yes"};
+let phone = new Phone("Samsung", 300);
+
+console.log(Phone.phoneques);
+
+console.log(phone.myvar);
+
 interface SalesPerson{
   name: string;
   age: number;
@@ -48,6 +79,26 @@ const sword1: DealerShip = {car1: "honda", car3:ismycarwallet(mycar), car4: "toy
 
 if (import.meta.main) {
   console.log("Add e2 + 3 =", add(2, 3));
+  for (let i = 0; i < 5; i++) {
+    console.log(rand.first());
+  }
+  var counter=1;
+  firstlabel:while(counter<10){
+    console.log("counter is " + counter);
+    counter++;
+    console.log("counter is " + counter);
+    while(counter<3){
+        break firstlabel;
+    }
+  }
+   
+  var firstfun= function(a:number ,b:number[]){
+    console.log(b.map((x)=>a*x)  );   
+  }
+  firstfun(2,[1,2,3]);
+
+
+
   console.log(add(Number(Deno.args[0]) ,Number(Deno.args[1])));
   console.log(rand.first());
   console.log(sword1);
