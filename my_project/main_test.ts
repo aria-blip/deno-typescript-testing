@@ -1,3 +1,4 @@
+#!/usr/bin/env -S deno run --allow-env
 import { assertEquals } from "@std/assert";
 import { add } from "./main.ts";
 
